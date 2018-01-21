@@ -1,0 +1,17 @@
+name = starGazer 
+description = Jeff's first Drupal theme. 
+package = Core
+version = VERSION
+core = 7.x
+stylesheets[all][] = css/screen.css
+stylesheets[print][] = css/print.css
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[highlighted] = Highlighted
+regions[main_page_content] = Main page content
+regions[featured] = Featured
