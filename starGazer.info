@@ -5,6 +5,7 @@ version = VERSION
 core = 7.x
 stylesheets[all][] = css/screen.css
 stylesheets[print][] = css/print.css
+
 regions[left] = Left sidebar
 regions[right] = Right sidebar
 regions[content] = Content
@@ -15,3 +16,9 @@ regions[sidebar_second] = Sidebar second
 regions[highlighted] = Highlighted
 regions[main_page_content] = Main page content
 regions[featured] = Featured
+
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+regions[footer] = Footer
