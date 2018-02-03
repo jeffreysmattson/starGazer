@@ -6,9 +6,7 @@
 function starGazer_preprocess_page(&$variables) {
   global $user;
   $user_data = user_load($user->uid);
-echo "<pre>";
-var_dump($user_data);
-echo "</pre>";
+
   if(isset($user->uid) && $user->uid > 0){
     $variables['loggedIn'] = $user->uid;
     $variables['userName'] = $user->name;
@@ -76,7 +74,7 @@ function starGazer_form_alter(&$form, &$form_state, $form_id) {
 
     //$form['actions']['submit'] = array('#type' => 'button', '#src' => base_path() . path_to_theme() . '/images/icon-search.png');
 
-// Add extra attributes to the text box
+    // Add extra attributes to the text box
     $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search Site';}";
     $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search Site') {this.value = '';}";
   }

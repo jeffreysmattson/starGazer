@@ -4,5 +4,8 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "../bourbon/bourbon";
+@import "parts/_variables.scss";
+@import "parts/_mixins.scss";
+@import "parts/_global";
 @import "parts/_main";
 @import "parts/_footer";

@@ -1,21 +1,11 @@
 body{
     background: #000;
 }
-.contentContainer{
-    min-height: calc(100vh - 172px);
-}
 #header{
     background: #ffffff;
     height: 200px;
 }
-.navbar-brand{
-    padding: 0px;
-}
-.form-submit{
-    background: #46a88c;
-    @include border-top-radius(3px);
-    @include border-bottom-radius(3px);
-}
+
 .form-control{
     &.search-block-input{
         width: 103px;
@@ -30,8 +20,6 @@ body{
 }
 /* Login Form */
 .loginWrapper{
-    margin-bottom: 40px;
-    margin-top: 40px;
     .form-type-password{
         input{
             width: 100%;
