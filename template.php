@@ -5,20 +5,30 @@
  */
 function starGazer_preprocess_page(&$variables) {
   global $user;
-  
+  $user_data = user_load($user->uid);
+echo "<pre>";
+var_dump($user_data);
+echo "</pre>";
   if(isset($user->uid) && $user->uid > 0){
     $variables['loggedIn'] = $user->uid;
     $variables['userName'] = $user->name;
     $variables['mail']     = $user->mail;
+    $variables['timezone'] = $user->timezone;
+    $variables['profileImageUrl'] =  file_create_url($user_data->picture->uri);
+    if(!empty($user_data->field_business_name['und'][0]['safe_value'])){
+      $variables['businessName'] = $user_data->field_business_name['und'][0]['safe_value'];
+    }
+    $variables['firstName'] = $user_data->field_first_name['und'][0]['safe_value'];
+    $variables['lastName'] = $user_data->field_last_name['und'][0]['safe_value'];
+
   }
 
-    if (!empty($variables['site_name'])) {
-        $variables['site_title'] = $variables['site_name'];
-    }
-    $variables['site_html'] = '<span>' . $variables['site_title'] . '</span>';
+  if (!empty($variables['site_name'])) {
+      $variables['site_title'] = $variables['site_name'];
+  }
+  $variables['site_html'] = '<span>' . $variables['site_title'] . '</span>';
 
-    if (isset($variables['main_menu'])) {
-      
+  if (isset($variables['main_menu'])) {
     $variables['primary_nav'] = theme('links__system_main_menu', array(
         'links' => $variables['main_menu'],
         'attributes' => array(
@@ -30,7 +40,6 @@ function starGazer_preprocess_page(&$variables) {
         'class' => array('element-invisible'),
       )
     ));
-
   }
   else {
     $variables['primary_nav'] = FALSE;

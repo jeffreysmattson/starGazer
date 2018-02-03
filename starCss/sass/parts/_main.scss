@@ -28,3 +28,20 @@ body{
         margin-top: 32px;
     }
 }
+/* Login Form */
+.loginWrapper{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    .form-type-password{
+        input{
+            width: 100%;
+        }
+    }
+    .form-type-textfield{
+        @extend .form-type-password;
+    }
+}
+.profileWrapper{
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
