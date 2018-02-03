@@ -11,7 +11,7 @@ gulp.task('sass', function(){
   return gulp.src('starCss/sass/screen.scss')
     .pipe(soften(4))
     .pipe(sass())
-    //.pipe(autoprefixer())
+    .pipe(autoprefixer())
     .pipe(size({title: 'css'}))
     .pipe(gulp.dest('css/'))
     .pipe(rename({suffix: '.min'}))
