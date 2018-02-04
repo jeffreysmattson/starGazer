@@ -70,9 +70,6 @@ function starGazer_form_alter(&$form, &$form_state, $form_id)
         $form['actions']['submit']['#attributes']['alt'] = "Search Button"; //add alt tag
         $form['actions']['submit']['#value'] = 'Search'; //add title
         $form['actions']['submit']['#attributes']['class'][] = 'btn btn-success';
-        //unset($form['actions']['submit']['#value']); // Remove the value attribute from the input tag, since it is not valid when input type = image
-
-        //$form['actions']['submit'] = array('#type' => 'button', '#src' => base_path() . path_to_theme() . '/images/icon-search.png');
 
         // Add extra attributes to the text box
         $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search Site';}";
