@@ -6,8 +6,6 @@ var size = require('gulp-size');
 var rename = require('gulp-rename');
 var soften = require('gulp-soften');
 
-
-
 // Sass
 gulp.task('sass', function(){
   return gulp.src('starCss/sass/screen.scss')
