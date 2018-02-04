@@ -1,5 +1,5 @@
 .contentContainer{
-    @include calc( min-height, '100vh - (172px + #{$contentMargins})');
+    @include calc( min-height, '100vh - (200px + #{$contentMargins})');
     margin-bottom: $contentMargins;
     margin-top: $contentMargins;
 }

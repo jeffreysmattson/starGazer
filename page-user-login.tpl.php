@@ -8,7 +8,7 @@
             <div class="navbar-header">
               <?php if ($logo): ?>
                 <a href="<?php print $front_page ?>">
-                <img src="<?php print $logo ?>" alt="<?php print $site_name ?>" title="<?php print $site_name ?>" id="logo" />
+                  <img src="<?php print $logo ?>" alt="<?php print $site_name ?>" title="<?php print $site_name ?>" id="logo" />
                 </a>
               <?php endif; ?>
             </div>
