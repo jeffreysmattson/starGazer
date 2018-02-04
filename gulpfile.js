@@ -6,6 +6,8 @@ var size = require('gulp-size');
 var rename = require('gulp-rename');
 var soften = require('gulp-soften');
 
+
+
 // Sass
 gulp.task('sass', function(){
   return gulp.src('starCss/sass/screen.scss')
@@ -26,9 +28,5 @@ gulp.task('watch', function(){
     gulp.watch('starCss/sass/parts/*.scss', gulp.series('sass')); 
 });
 
-// Minify
-gulp.task('minify-css', function(){
-  return gulp.src('css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('css'));
-});
+// Default
+gulp.task('default', gulp.series('sass'));
